@@ -87,10 +87,19 @@ public class BuggyIntDListTest {
         assertEquals("First item after reversal should be 5", 5, l.get(0));
         assertEquals("Last item after reversal should be 5", 5, l.get(-1));
 
+        l = new BuggyIntDList(12, 23);
+        l.reverse();
+        assertEquals("Size after reversal should be 5", 2, l.size());
+        assertEquals(".getFront() after reversal should be 56", 23,
+                l.getFront());
+        assertEquals(".getBack() after reversal should be 12", 12, l.getBack());
+
         l = new BuggyIntDList(12, 23, 34, 45, 56);
         l.reverse();
-        assertEquals("Size after reversal should be 5", 5, l.size());
-        assertEquals(".getFront() after reversal should be 56", 56, l.getFront());
+        assertEquals("Size after reversal should be 5", 5,
+                l.size());
+        assertEquals(".getFront() after reversal should be 56",
+                56, l.getFront());
         assertEquals(".getBack() after reversal should be 12", 12, l.getBack());
         assertEquals("First item after reversal should be 56", 56, l.get(0));
         assertEquals("Second item after reversal should be 45", 45, l.get(1));
