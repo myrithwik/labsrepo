@@ -50,6 +50,9 @@ public class UnionFind {
     public void connect(int v1, int v2) {
         validate(v1);
         validate(v2);
+        if (isConnected(v1, v2)) {
+            return ;
+        }
         if (sizeOf(v1) <= sizeOf(v2)) {
             int sizeV1 = sizeOf(v1);
             int root2 = find(v2);
