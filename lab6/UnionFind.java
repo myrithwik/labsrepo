@@ -34,6 +34,8 @@ public class UnionFind {
 
     /* Returns true if nodes v1 and v2 are connected. */
     public boolean isConnected(int v1, int v2) {
+        validate(v1);
+        validate(v2);
         if (find(v1) == find(v2)) {
             return true;
         }
@@ -46,6 +48,8 @@ public class UnionFind {
        vertex with itself or vertices that are already connected should not 
        change the sets but may alter the internal structure of the data. */
     public void connect(int v1, int v2) {
+        validate(v1);
+        validate(v2);
         if (sizeOf(v1) <= sizeOf(v2)) {
             int root2 = find(v2);
             int root1 = find(v1);
@@ -61,6 +65,7 @@ public class UnionFind {
     /* Returns the root of the set v1 belongs to. Path-compression is employed
        allowing for fast search-time. */
     public int find(int v1) {
+        validate(v1);
         while (parent(v1) > 0) {
             v1 = parent(v1);
         }
