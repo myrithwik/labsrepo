@@ -1,0 +1,18 @@
+InsertInOrder(1000): class ULLMap: 0.02 sec
+                     class BSTMap: 0.02 sec
+                     Java's Built-in TreeMap: 0.00 sec
+                     Java's Built-in HashMap: 0.00 sec
+InsertInOrder(5000): class ULLMap: 0.21 sec
+                     class BSTMap: 0.14 sec
+                     Java's Built-in TreeMap: 0.01 sec
+                     Java's Built-in HashMap: 0.00 sec
+InsertInOrder(10000):class ULLMap: 0.77 sec
+                     class BSTMap: 0.62 sec
+                     Java's Built-in TreeMap: 0.01 sec
+                     Java's Built-in HashMap: 0.01 sec
+InsertInOrder(50000):--Stack Overflow -- couldn't add 50000 strings.
+
+InsertRandom(1000):
+InsertRandom(5000):
+InsertRandom(10000):
+InsertRandom(50000):
