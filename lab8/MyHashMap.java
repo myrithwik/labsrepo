@@ -89,7 +89,6 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
 
         if (item != null) {
             item.val = value;
-            size += 1;
         }
         else {
             int bucketInd = wrap(key, buckets.length);
